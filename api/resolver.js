@@ -1,12 +1,17 @@
+var diffs = require('./diffs');
+
 module.exports = function(req, res) {
   var data = JSON.parse(req.body.params);
   if (!data) {
     res.status(400 /* Bad params */ ).send('Invalid params');
     return;
   }
+  // var width = data.width > 600 ? 600 : data.width;
+  // var html = '<img style="max-width:100%;" src="' + data.src + '" width="' + width + '"/>';
 
-  var width = data.width > 600 ? 600 : data.width;
-  var html = '<img style="max-width:100%;" src="' + data.src + '" width="' + width + '"/>';
+  console.log(diffs.get_hash(data.original, data.modified));
+
+
   res.json({
     body: html
     // Add raw:true if you're returning content that you want the user to be able to edit
