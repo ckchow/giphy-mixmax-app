@@ -1,25 +1,29 @@
 {
-  "name": "giphy-mixmax-app",
+  "name": "differ-mixmax-app",
   "version": "0.0.1",
-  "description": "Giphy App for Mixmax",
+  "description": "Diff App for Mixmax",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "debug": "nodemon --inspect server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mixmaxhq/giphy-mixmax-app.git"
+    "url": "git://github.com/ckchow/giphy-mixmax-app.git"
   },
-  "author": "Chanpory Rith <chanpory@mixmax.com> (https://mixmax.com/)",
+  "author": "Chris Chow (chris.kr.chow@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mixmaxhq/giphy-mixmax-app/issues"
+    "url": "https://github.com/ckchow/giphy-mixmax-app/issues"
   },
   "homepage": "https://github.com/mixmaxhq/giphy-mixmax-app",
   "dependencies": {
     "body-parser": "^1.12.2",
     "cors": "^2.7.1",
+    "diff": "^3.2.0",
+    "diff2html": "^2.3.0",
     "express": "^4.12.3",
+    "juice": "^4.0.2",
     "node-murmurhash": "^2.1.0",
     "pem": "^1.9.4"
   },
